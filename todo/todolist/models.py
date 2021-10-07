@@ -7,8 +7,8 @@ class Profile(models.Model):
         ('Delete', 'Delete'),
         ('Add', 'Add'),
     )
-    name = models.CharField(max_length=300)
+    username = models.CharField(max_length=300)
     options = models.CharField(max_length=300, choices = CHOICES)
     created_date = models.DateTimeField(default=timezone.now)
     def __str__(self):
-        return self.name 
+        return self.username 

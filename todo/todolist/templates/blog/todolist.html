@@ -1,13 +1,12 @@
 {% extends 'blog/base.html' %}
-
 {% block content %}
-    {% for Profile in Profiles %}
-        <div class="Profile">
-            <div class="date">
-                {{ Profile.created_date }}
-            </div>
-            <h4><a href="" style="color:red; text-decoration:none;">{{ Profile.name }}</a></h4>
-            <p>{{ Profile.options|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+{% for profile in profiles %}
+<div class="name">
+   <div class="date">
+      {{ post.created_date }}
+   </div>
+   <h4><a href="" style="color:red; text-decoration:none;">{{ post.name }}</a></h4>
+   <p>{{ post.category|linebreaksbr }}</p>
+</div>
+{% endfor %}
 {% endblock %}
